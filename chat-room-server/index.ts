@@ -17,3 +17,19 @@ app.get("/", (req: Request, res: Response) => {
 const server = app.listen(PORT, () => {
 	console.log(`servidor de sala de bate-papo iniciado em ${PORT}`);
 });
+
+const io = new Server(server, {
+	pingTimeout: 60000,
+	cors: {
+		origin: "*",
+	},
+});
+
+io.on("connection", (socket) => {
+	socket.on('send-message', ({ message, username}, room) => {
+		socket.to(room).emit('receive-message', { message, username});
+	});
+	socket.on('join-room', (room) => {
+		socket.join(room);
+	});
+});
