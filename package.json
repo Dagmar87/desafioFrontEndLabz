@@ -1,0 +1,19 @@
+{
+  "name": "desafiofrontendlabz",
+  "version": "1.0.0",
+  "description": "- Desafio Técnico: DESAFIO FRONTEND LAAABZZZZZZ\r - Empresa: Edulabzz/toolzz \r - Vaga: Desenvolvedor Front-End\r - Nome: José Dagmar Florentino da Silva Sobrinho",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+		"dev:client": "cd chat-client-frontend && npm run dev",
+		"dev:server": "cd chat-room-server && npm run dev"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
