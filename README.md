@@ -8,7 +8,7 @@
 
 ## Descrição
 
-Esse projeto consiste na criação de uma aplicação de chat em tempo real, utilizando a linguagem TypeScript com framwwork Next.js e Tailwind CSS.
+Esse projeto consiste na criação de uma aplicação de chat em tempo real, utilizando a linguagem TypeScript com framework Next.js e Tailwind CSS.
 
 ## Linguagens e Tecnologias utilizadas
 
