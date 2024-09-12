@@ -1,16 +1,17 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 interface UserState {
-	username: string;
+	username:string
+	
 }
 
 const initialState: UserState = {
-	username: '',
+	username:''
 };
 
 const userSlice = createSlice({
 	name: 'auth',
-	initialState, 
+	initialState,
 	reducers: {
 		setUser(state, action) {
 			state.username = action.payload;
@@ -22,5 +23,4 @@ const userSlice = createSlice({
 });
 
 export const { setUser, resetUserSlice } = userSlice.actions;
-
 export default userSlice.reducer;

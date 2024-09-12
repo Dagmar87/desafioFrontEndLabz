@@ -6,7 +6,7 @@ import { Socket, io } from 'socket.io-client';
 import { DefaultEventsMap } from '@socket.io/component-emitter';
 import { useSelector } from 'react-redux';
 
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL ?? "";
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL ?? '';
 
 let socket: Socket<DefaultEventsMap, DefaultEventsMap>;
 

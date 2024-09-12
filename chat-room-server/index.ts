@@ -19,17 +19,17 @@ const server = app.listen(PORT, () => {
 });
 
 const io = new Server(server, {
-	pingTimeout: 60000,
-	cors: {
-		origin: "*",
-	},
+  pingTimeout: 60000,
+  cors: {
+    origin: "*",
+  },
 });
 
 io.on("connection", (socket) => {
-	socket.on('send-message', ({ message, username}, room) => {
-		socket.to(room).emit('receive-message', { message, username});
-	});
-	socket.on('join-room', (room) => {
-		socket.join(room);
-	});
+  socket.on('send-message',({message,username},room)=>{
+    socket.to(room).emit('recieve-message',{message,username})
+  })
+  socket.on('join-room',(room)=>{
+    socket.join(room)
+  })
 });
